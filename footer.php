@@ -55,6 +55,7 @@
 			
 			<!-- /bottom footer -->
 		</footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/slick.min.js"></script>
@@ -65,6 +66,7 @@
 		<script src="js/sweetalert.min"></script>
 		<script src="js/jquery.payform.min.js" charset="utf-8"></script>
     <script src="js/script.js"></script>
+	<script src="js/ajaxSearch.js"></script>
 		<script>var c = 0;
         function menu(){
           if(c % 2 == 0) {

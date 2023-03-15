@@ -43,7 +43,33 @@ session_start();
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
+				#search-results {
+		position: absolute;
+		width: 100%;
+		max-height: 200px;
+		overflow-y: auto;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		}
+
+		.search-result {
+		padding: 5px;
+		border-bottom: 1px solid #eee;
+		}
+
+		.search-result a {
+		color: #000;
+		font-weight: bold;
+		}
+
+		.search-result p {
+		margin: 0;
+		font-size: 14px;
+		color: #666;
+		}
+
         #navigation {
           background: #FF4E50;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
@@ -108,9 +134,37 @@ session_start();
     .glyphicon-chevron-right:before{
         content:"\f054"
     }
-        
+/* neewww */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
 
-       
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
         
         </style>
 
@@ -187,13 +241,14 @@ session_start();
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
-								<form>
+								<form action="search.php" method="post">
 									<select class="input-select">
 										<option value="0">All Categories</option>
 										<option value="1">Men</option>
 										<option value="1">Women </option>
 									</select>
-									<input class="input" id="search" type="text" placeholder="Search here">
+									<input  type="text" name="search" id="search" class="input" placeholder="Search...">
+									<div id="search-results"></div>
 									<button style="width: 70px; height:40px;" type="submit" id="search_btn" class="search-btn">Search</button>
 								</form>
 							</div>
@@ -305,4 +360,4 @@ session_start();
 
                         </div>
                       </div>
-		
+	
